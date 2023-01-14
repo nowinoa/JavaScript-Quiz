@@ -105,38 +105,76 @@ const questions = [
 //Elements from HTML
 let titleQuestion = document.querySelector("#question");
 let answers = document.querySelector("#answers");
+let start = document.querySelector('#start');
+let timer = document.querySelector('#timer');
+let scorer = document.querySelector('#scorer');
 //Div to array
 let btns = [...answers.children];
-
+//For the index of the questions questions[i]
 let i = 0;
 let element;
 console.log(questions[i].correct);
+
+//Add the timer and the score
+let time = 60;
+let score = 0;
+
+//timer - rest one second each 1000ms = 1s
+function setTimeout() {
+    var timerInterval = setInterval(function() {
+        time--;
+        // if(time == 0) {
+        //     score = 0;
+        //     time = 0;
+        //     console.log('You lost!')
+        //   }
+        timer.textContent = time;
+        if(time == 0){
+            clearInterval(timerInterval);
+            console.log('Time out!')
+        }
+    }, 1000)
+}
+
 //writes the text of the buttons
 function writteBtns() {
   btns.forEach((e) => {
     e.textContent = questions[i].answers[e.dataset.number];
   });
 }
-writteBtns();
+
 //writes the question text
 function writeQuestion() {
   titleQuestion.textContent = questions[i].ques;
 }
-writeQuestion();
-//
+
+//Check answer
+function checkAnswers(txt) {
+    let solution = document.getElementById('solution');
+    //checks if is the correct answer
+      if (txt === questions[i].correct) {
+          solution.textContent = "Correct!"
+          //if is correct it adds a point to the score
+          scorer.textContent = score + 1;
+          if(score == 10) {
+            score = 0;
+            time = 0;
+            console.log('You won!')
+          }
+      } else {
+          solution.textContent = "Upsy Daisy!";
+          //if is incorrect substracts -5s
+          time = time - 5;
+          timer.textContent = time;
+      }
+}
 function checkEvent(event) {
   //brings us the kind of tag it is
   element = event.target;
   //if is a btn
   if (element.tagName === "BUTTON") {
-    //brings the text of the clicked btn
-    let txt = event.target.textContent;
-  //checks if is the correct answer
-    if (txt === questions[i].correct) {
-    console.log("ycorres");
-    } else {
-    console.log("nope");
-    }
+   
+   checkAnswers(event.target.textContent);
     //add 1 to the i - index
     i++;
     //if is 10, then bring it back to 0
@@ -148,24 +186,20 @@ function checkEvent(event) {
   }
 }
 
+//Displays the document
+start.addEventListener('click', function() {
+    writeQuestion();
+    writteBtns();
+    setTimeout();
+})
+//checks the event and if is correct
 answers.addEventListener("click", checkEvent);
-//Add the timer and the score
-//if the question is correct add one point to score
-//if the question is incorrect rest 5 seconds to the timer
-//when time is equal 0 a modal jumps with the score, a btn.
-//When you get the maximun - jumps a victory modal
 
-//timer
-// var timer = document.querySelector('#timer');
-// var startTime = 60;
-// function setTimeout() {
-//     var timerInterval = setInterval(function() {
-//         startTime--;
-//         timer.textContent = startTime;
-//         if(startTime == 0){
-//             clearInterval(timerInterval);
-//             console.log('Time out!')
-//         }
-//     }, 1000)
-// }
-// setTimeout();
+//when the socore = 10 --> display a victory modal
+//when the time = 0 --> display a fail modal
+
+
+
+
+
+
