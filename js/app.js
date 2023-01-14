@@ -105,42 +105,44 @@ const questions = [
 //Elements from HTML
 let titleQuestion = document.querySelector("#question");
 let answers = document.querySelector("#answers");
-
+//Div to array
 let btns = [...answers.children];
 
 let i = 0;
 let element;
 console.log(questions[i].correct);
-
+//writes the text of the buttons
 function writteBtns() {
   btns.forEach((e) => {
     e.textContent = questions[i].answers[e.dataset.number];
   });
 }
 writteBtns();
-
+//writes the question text
 function writeQuestion() {
   titleQuestion.textContent = questions[i].ques;
 }
 writeQuestion();
-
+//
 function checkEvent(event) {
-  let txt = event.target.textContent;
-
-  if (txt === questions[i].correct) {
-    console.log("ycorres");
-  } else {
-    console.log("nope");
-  }
+  //brings us the kind of tag it is
   element = event.target;
- 
+  //if is a btn
   if (element.tagName === "BUTTON") {
-    
+    //brings the text of the clicked btn
+    let txt = event.target.textContent;
+  //checks if is the correct answer
+    if (txt === questions[i].correct) {
+    console.log("ycorres");
+    } else {
+    console.log("nope");
+    }
+    //add 1 to the i - index
     i++;
+    //if is 10, then bring it back to 0
     if (i >= 10) {
       i = 0;
     }
-    
     writeQuestion();
     writteBtns();
   }
