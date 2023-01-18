@@ -8,6 +8,8 @@
 }
 /* Globals */
 body {
+  margin: 0;
+  height: 100%;
   background-color: #f7df1e;
 }
 ::selection {
