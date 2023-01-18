@@ -8,8 +8,6 @@
 }
 /* Globals */
 body {
-  margin: 0;
-  height: 100%;
   background-color: #f7df1e;
 }
 ::selection {
@@ -547,10 +545,6 @@ footer button.show {
   }
   .quiz_box {
     width: 90%;
-    max-height: 800px;
-    padding-top: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
   }
   .quiz_box header {
     position: relative;
