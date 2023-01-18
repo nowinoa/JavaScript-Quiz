@@ -1,24 +1,24 @@
 let questions = [
     {
     numb: 1,
-    question: "What is the difference between let and var in JavaScript?",
-    answer: "let is block-scoped while var is function-scoped",
+    question: "What is the scope of a variable declared with var in javascript?",
+    answer: "Global",
     options: [
-        "let can only be used inside an if statement",
-        "var is deprecated and should no longer be used",
-        "let can only be used inside a loop",
-        "let is block-scoped while var is function-scoped",
+        "Global",
+        "Local",
+        "Both",
+        "var is a constant",
     ]
   },
     {
     numb: 2,
-    question:"What is the difference between == and === in JavaScript?",
-    answer: "== compares values, === compares values and types",
+    question:"What's the difference between '==' and '===' in JS?",
+    answer: "== loose, === strict",
     options: [
-        "== and === are the same thing",
-        "== compares values, === compares values and types",
-        "=== is more efficient than ==",
-        " == is used for strings, === is used for numbers",
+        "== strict, === loose",
+        "== loose, === strict",
+        "=== objects, == arrays",
+        " == strings, === numbers",
     ]
   },
     {
@@ -90,23 +90,23 @@ let questions = [
     {
     numb: 9,
     question: "How to load data from local storage in javascript?",
-    answer:  "var data = loadStorage('key')",
+    answer:  "loadStorage('key')",
     options: [
-        "var data = localStorage.getItem('key')",
-        "var data = loadStorage('key')",
-        "var data = window.localStorage.load('key')",
-        "var data = storage.load('key')",
+        "localStorage.setItem('key')",
+        "loadStorage('key')",
+        "localStorage.load('key')",
+        "storage.load('key')",
     ]
   },
     {
     numb: 10,
-    question: "How to add an event listener to a DOM element in javascript?",
-    answer:  "element.addEventListener('event', function)",
+    question: "What is the correct way to select a DOM element by its id in JavaScript?",
+    answer:  "document.getElementById('id')",
     options: [
-        "element.attachEvent('event', function)",
-        "element.on('event', function)",
-        "element.addEventListener('event', function)",
-        "element.listen('event', function)",
+        "document.getElementByTag('id')",
+        "document.getElementsByID('id')",
+        "document.querySelector('id')",
+        "document.getElementById('id')",
     ]
   }
   ];
