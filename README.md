@@ -3,6 +3,8 @@
 ## Description
 This is a JavaScript-based quiz application that allows users to test their knowledge on a variety of topics. The motivation behind building this project was to create an interactive and engaging way for users to learn and test their knowledge. The problem it solves is providing an alternative to traditional methods of learning, such as reading and taking notes. Through building this project, I learned about JavaScript functions and event handling, as well as working with the local storage.
 
+https://nowinoa.github.io/JavaScript-Quiz/
+
 ## Table of contents
 - Installation
 - Usage
