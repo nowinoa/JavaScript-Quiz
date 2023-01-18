@@ -27,6 +27,7 @@ To install this project, simply clone the repository and open the index.html fil
 9. You can also delete your details and go to the start screen.
 
 <img src='./img/start-box.png' alt='starting javascript quiz screen'>
+<img src='./img/scores.png' alt='scores button'>
 
 ## Credits
 This project was design and created by Ainhoa Prada.
