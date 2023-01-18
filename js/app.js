@@ -20,6 +20,7 @@ let player_box = document.querySelector(".player_box");
 let playerListItem = document.querySelector(".player-info");
 let showMemory = document.querySelector(".show-memory");
 let memory_box = document.querySelector(".memory_box");
+let memoryText = document.querySelector('.memory-text');
 // creating the new div tags which for icons
 let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
@@ -84,6 +85,10 @@ playerDeleteBtn.onclick = () => deleteMemory();
 saveBtn.onclick = () => {
   keepDetails();
   writeInfoPlayer();
+  memoryText.textContent = 'Your details have been succesfully saved';
+  saveBtn.setAttribute('disabled', 'disabled');
+  saveBtn.style = 'opacity: 0.5';
+  namePlayer.value = '';
 };
 socoresBtn.onclick = () => {
   showScore();

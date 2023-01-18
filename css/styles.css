@@ -542,6 +542,7 @@ footer button.show {
   /* Quiz box */
   .quiz_box {
     width: 90%;
+    max-height: 750px;
   }
   .quiz_box header {
     position: relative;
