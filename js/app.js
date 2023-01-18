@@ -38,6 +38,11 @@ continue_btn.onclick = ()=>{
 }
 
 const quit_quiz = result_box.querySelector(".buttons .quit");
+const quit_memory_box = document.querySelectorAll('.memory-exit');
+quit_memory_box.forEach(btn => btn.onclick = () => {
+    window.location.reload(); 
+})
+const player_exit = document.querySelector('.player-exit');
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
   window.location.reload(); //reload the current window
@@ -184,7 +189,8 @@ showMemory.addEventListener('click', () => {
 let saveBtn = document.querySelector('.save-result');
 let socoresBtn = document.querySelector('.scores');
 let namePlayer = document.getElementById('player');
-
+let playerDeleteBtn = document.querySelector('.player-delete');
+playerDeleteBtn.onclick = () => deleteMemory();
 saveBtn.onclick = () => {
   keepDetails();
 }
@@ -213,4 +219,8 @@ function writeInfoPlayer () {
   let score = window.localStorage.getItem('score');
   playerListItem.textContent = name + ': ' + score
 }
-
+function deleteMemory() {
+  window.localStorage.removeItem('score');
+  window.localStorage.removeItem('name');
+  playerListItem.textContent = 'Name: score';
+}

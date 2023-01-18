@@ -441,32 +441,61 @@ footer button.show{
 }
 .memory_box .save-result:hover {
     background-color: #F7DF1E;
-    color: #000;
 }
-.memory_box .memory-exit {
+ .memory-exit {
     cursor: pointer;
     width: 180px;
     height: 40px;
     font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 5px;
+    color: #000;
+    margin: 0 auto;
+    font-weight: 700;
+}
+ .memory-exit:hover {
+    background-color: #000;
+    color: #fff;
+    border: none;
+
+}
+/* Player details */
+.player_box {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    padding: 20px 30px 30px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.player_box ul {
+    list-style: none;
+}
+.player_box .memory-exit {
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
+.player_btns .player-delete {
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
     background-color: #000;
     border: 2px solid #000;
     border-radius: 5px;
     color: #fff;
     margin: 0 auto;
+    font-weight: 700;
 }
-.memory_box .memory-exit:hover {
+.player_btns .player-delete:hover {
+    color: #fff;
     background-color: #F7DF1E;
-    color: #000;
-    border: none;
-}
-.player_box {
-    opacity: 0;
-    background-color: #fff;
-    padding: 20px 30px 30px 20px;
-    border-radius: 15px;
-}
-.player_box ul {
-    list-style: none;
+    border: 2px solid #F7DF1E;
 }
 /* Media queries */
 @media (max-width: 780px) {
@@ -481,6 +510,7 @@ footer button.show{
         padding: 7px 15px;
     }
 }
+
 @media(max-width: 460px) {
     .start {
         width: 90%;
@@ -495,10 +525,69 @@ footer button.show{
         font-size: 18px;
         margin: 10px 0 0 0;
     }
+    /* Info box */
+    .info_box {
+        width: 90%;
+    }
+    .info_box .info-title {
+        font-size: 25px;
+    }
+    .info_box .info-list{
+        font-size: 17px;
+        padding: 15px 15px 15px 15px;
+    }
+    /* Quiz box */
+    .quiz_box {
+        width: 90%;
+    }
+    .quiz_box header{
+        position: relative;
+        z-index: 2;
+        height: 130px;
+        padding: 0 30px;
+        background: #fff;
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+    }
+    .quiz_box header .title{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    section .que_text{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    section .option_list .option{
+        font-size: 15px;
+    }
+    /* Result box */
+    .result_box{
+        width: 90%;
+        display: flex;
+        padding: 25px 15px;
+    }
+
+    .result_box .score_text span{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .result_box .buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    
     /* Save memory screen */
     .memory_box {
-        opacity: 0;
-        pointer-events: none;
         background-color: #fff;
         width: 90%;
         height: 350px;
@@ -511,6 +600,7 @@ footer button.show{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                     0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    
     .memory_box h3 {
         font-size: 16px;
     }
@@ -542,5 +632,14 @@ footer button.show{
     .memory_box .save-result {
         width: 100px;
 
+    }
+    /* Player box */
+    .player_box {
+        width: 90%;
+    }
+    .player_btns {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }
