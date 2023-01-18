@@ -85,10 +85,13 @@ playerDeleteBtn.onclick = () => deleteMemory();
 saveBtn.onclick = () => {
   keepDetails();
   writeInfoPlayer();
-  memoryText.textContent = 'Your details have been succesfully saved';
-  saveBtn.setAttribute('disabled', 'disabled');
-  saveBtn.style = 'opacity: 0.5';
-  namePlayer.value = '';
+  if(namePlayer.value !== '') {
+    memoryText.textContent = 'Your details have been succesfully saved';
+    saveBtn.setAttribute('disabled', 'disabled');
+    saveBtn.style = 'opacity: 0.5';
+    namePlayer.value = '';
+  }
+ 
 };
 socoresBtn.onclick = () => {
   showScore();

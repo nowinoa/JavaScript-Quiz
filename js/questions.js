@@ -37,7 +37,7 @@ let questions = [
     question:"How do you add an element to an array in JavaScript?",
     answer:  "myArray.push(element)",
     options: [
-        "myArray[myArray.length] = element",
+        "myArray[length] = element",
         "myArray.add(element)",
         "myArray.insert(element)",
         "myArray.push(element)",
@@ -100,13 +100,13 @@ let questions = [
   },
     {
     numb: 10,
-    question: "What is the correct way to select a DOM element by its id in JavaScript?",
-    answer:  "document.getElementById('id')",
+    question: "What is the correct way to select a DOM element by its id? = document.",
+    answer:  "getElementById('id')",
     options: [
-        "document.getElementByTag('id')",
-        "document.getElementsByID('id')",
-        "document.querySelector('id')",
-        "document.getElementById('id')",
+        "getElementByTag('id')",
+        "getElementsByID('id')",
+        "querySelector('id')",
+        "getElementById('id')",
     ]
   }
   ];
