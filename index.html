@@ -1,104 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Quiz</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
-  <!-- Start content -->
-  <div class="start">
-    <h1 class="start-title"><span class="js-logo">JS </span>Quiz</h1>
-    <p class="start-description">Welcome to our JavaScript Quiz App! In this quick and fun quiz, you will have the opportunity to test your knowledge of the JavaScript programming language. You will have 10 questions to answer in 60 seconds, so be ready to think fast!</p>
-    <button class="start-btn">Start Quiz</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Start content -->
+    <div class="start">
+      <h1 class="start-title"><span class="js-logo">JS </span>Quiz</h1>
+      <p class="start-description">
+        Welcome to our JavaScript Quiz App! In this quick and fun quiz, you will
+        have the opportunity to test your knowledge of the JavaScript
+        programming language. You will have 10 questions to answer in 60
+        seconds, so be ready to think fast!
+      </p>
+      <button class="start-btn">Start Quiz</button>
+    </div>
 
-  <!-- Info content -->
-  <div class="info_box">
-          <div class="info-title"><span>Rules of this Quiz</span></div>
-          <div class="info-list">
-              <div class="info">1. You will have only <span>60 seconds</span> per each question.</div>
-              <div class="info">2. Once you select your answer, it can't be undone.</div>
-              <div class="info">3. You can't select any option once time goes off.</div>
-              <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-              <div class="info">5. You'll get points on the basis of your correct answers.</div>
-          </div>
-
-          <div class="buttons">
-              <button class="quit">Exit Quiz</button>
-              <button class="restart">Continue</button>
-          </div>
+    <!-- Info box-->
+    <div class="info_box">
+      <div class="info-title"><span>Rules of this Quiz</span></div>
+      <div class="info-list">
+        <div class="info">
+          1. You will have only <span>60 seconds</span> per each question.
+        </div>
+        <div class="info">
+          2. Once you select your answer, it can't be undone.
+        </div>
+        <div class="info">
+          3. You can't select any option once time goes off.
+        </div>
+        <div class="info">
+          4. You can't exit from the Quiz while you're playing.
+        </div>
+        <div class="info">
+          5. You'll get points on the basis of your correct answers.
+        </div>
       </div>
 
-    <!-- Questionary -->
+      <div class="buttons">
+        <button class="quit">Exit Quiz</button>
+        <button class="restart">Continue</button>
+      </div>
+    </div>
+
+    <!-- Questionary box-->
     <div class="quiz_box">
       <header>
-          <div class="title">JavaScript Quiz</div>
-          <div class="timer">
-              <div class="time_left_txt">Time Left:</div>
-              <div class="timer_sec">60</div>
-          </div>
-          <div class="time_line"></div>
+        <div class="title">JavaScript Quiz</div>
+        <div class="timer">
+          <div class="time_left_txt">Time Left:</div>
+          <div class="timer_sec">60</div>
+        </div>
+        <div class="time_line"></div>
       </header>
       <section>
-          <div class="que_text">
-              <!-- Here I've inserted question from JavaScript -->
-          </div>
-          <div class="option_list">
-              <!-- Here I've inserted options from JavaScript -->
-          </div>
+        <div class="que_text">
+          <!-- Here I've inserted question from JavaScript -->
+        </div>
+        <div class="option_list">
+          <!-- Here I've inserted options from JavaScript -->
+        </div>
       </section>
 
       <!-- footer of Quiz Box -->
       <footer>
-          <div class="total_que">
-            
-          </div>
-          <button class="next_btn">Next</button>
+        <div class="total_que"></div>
+        <button class="next_btn">Next</button>
       </footer>
-  </div>
+    </div>
 
-  <!-- Result Box -->
-  <div class="result_box">
-    <div class="icon">
+    <!-- Result Box -->
+    <div class="result_box">
+      <div class="icon">
         <i class="fas fa-crown"></i>
-    </div>
-    <div class="complete_text">You've completed the Quiz!</div>
-    <div class="score_text">
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text">
         <!-- Here I've inserted Score Result from JavaScript -->
-    </div>
-    <div class="buttons">
+      </div>
+      <div class="buttons">
         <button class="show-memory restart">Save Result</button>
         <button class="quit">Exit</button>
+      </div>
     </div>
-</div>
-
-<div class="memory_box hidde">
-  <div class="scores-header">
-    <button class="scores"><i class="fa-solid fa-trophy fa-3x"></i></button>
-  </div>
-  <h3>Tell us your name and we will add it to the score board!</h3>
-    <div class="input-field">
-      <input id="player"type="text" class="player-name" placeholder="Your Name">
-      <button class="save-result" >Save</button>
+    <!-- Memory box - save results -->
+    <div class="memory_box hidde">
+      <div class="scores-header">
+        <button class="scores"><i class="fa-solid fa-trophy fa-3x"></i></button>
+      </div>
+      <h3>Tell us your name and we will add it to the score board!</h3>
+      <div class="input-field">
+        <input
+          id="player"
+          type="text"
+          class="player-name"
+          placeholder="Your Name"
+        />
+        <button class="save-result">Save</button>
+      </div>
+      <button class="memory-exit btn">Exit</button>
     </div>
-    <button class="memory-exit btn">Exit</button>
-</div>
 
-<div class="player_box hidde">
-    <ul><li class="player-info"><b>Name:</b> score</li></ul>
-    <div class="player_btns">
-      <button class="player-delete">Delete</button>
-      <button class="player-exit  memory-exit">Exit</button>
+    <!-- Player details box -->
+    <div class="player_box hidde">
+      <!-- Player details inserted with js -->
+      <ul>
+        <li class="player-info"><b>Name:</b> score</li>
+      </ul>
+      <div class="player_btns">
+        <!-- clear memory of local storage -->
+        <button class="player-delete">Delete</button>
+        <button class="player-exit memory-exit">Exit</button>
+      </div>
     </div>
-</div>
-
-  
-
-  <script src="./js/questions.js"></script>
-  <script src="./js/app.js"></script>
-</body>
+    <script src="./js/questions.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
