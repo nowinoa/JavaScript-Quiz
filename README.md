@@ -23,7 +23,8 @@ To install this project, simply clone the repository and open the index.html fil
 6. If you answer correctly, you will earn 1 point.
 7. If you answer incorrectly, 5 seconds will be subtracted from the timer.
 8. Once the quiz is completed, you can save your name and score to the local storage.
-9. You can also delete your details and go to start screen.
+9. To see your result click on the cup icon.
+9. You can also delete your details and go to the start screen.
 
 <img src='./img/start-box.png' alt='starting javascript quiz screen'>
 
