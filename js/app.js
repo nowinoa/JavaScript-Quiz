@@ -182,10 +182,35 @@ showMemory.addEventListener('click', () => {
   result_box.classList.remove('activeResult')
 })
 let saveBtn = document.querySelector('.save-result');
-let prueb = document.querySelector('.prueba');
+let socoresBtn = document.querySelector('.scores');
+let namePlayer = document.getElementById('player');
 
-saveBtn.onclick = () => saveScore();
-function saveScore() {
-   localStorage.setItem("score", userScore);
+saveBtn.onclick = () => {
+  keepDetails();
 }
-prueb.onclick = () => {console.log(localStorage.getItem("score"));}
+function keepDetails() {
+  let name = namePlayer.value;
+  window.localStorage.setItem('name', name);
+  window.localStorage.setItem('score', userScore);
+}
+
+// saveBtn.onclick = () =>{
+// };
+let player_box = document.querySelector('.player_box');
+function showScore() {
+      player_box.classList.add('activePlayer');
+      memory_box.classList.add('hidde');
+  // let playerInfo = namePlayer.toUppercase() + ':' + userScore;
+  //  localStorage.setItem("score", playerInfo);
+}
+socoresBtn.onclick = () => {
+  writeInfoPlayer();
+  showScore();
+}
+let playerListItem = document.querySelector('.player-info');
+function writeInfoPlayer () {
+  let name = window.localStorage.getItem('name');
+  let score = window.localStorage.getItem('score');
+  playerListItem.textContent = name + ': ' + score
+}
+

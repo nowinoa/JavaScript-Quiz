@@ -14,7 +14,7 @@ body {
     color: #fff;
     background: #F7DF1E;
 }
-.start, .info_box, .quiz_box, .result_box, .memory_box{
+.start, .info_box, .quiz_box, .result_box, .memory_box, .player_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,7 +22,7 @@ body {
 }
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
-.result_box.activeResult{
+.result_box.activeResult, .player_box.activePlayer{
     opacity: 1;
     z-index: 5;
     pointer-events: auto;
@@ -68,33 +68,7 @@ body {
     color: #F7DF1E;
     background: #000;
 }
-@media (max-width: 780px) {
-    .js-logo {
-        font-size: 130px;
 
-    }
-    .start-title {
-        font-size: 100px;
-    }
-    .start-btn{
-        padding: 7px 15px;
-    }
-}
-@media(max-width: 460px) {
-    .start {
-        width: 90%;
-    }
-    .js-logo {
-        font-size: 90px;
-    }
-    .start-title {
-        font-size: 60px;
-    }
-    .start-description {
-        font-size: 18px;
-        margin: 10px 0 0 0;
-    }
-}
 /* Info questionary styles */
 .info_box {
     background: #fff;
@@ -201,13 +175,6 @@ body {
     background: #343a40;
     border: 1px solid #343a40;
     user-select: none;
-}
-.quiz_box header .time_line{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    height: 3px;
-    background: #007bff;
 }
 section{
     padding: 25px 30px 20px 30px;
@@ -410,4 +377,170 @@ footer button.show{
     background-color: #000;
     color: #fff;
 
+}
+.memory_box {
+    background-color: #fff;
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 30px 30px 30px;
+    /* align-items: center; */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.scores {
+    width: 70px;
+    height: 60px;
+    background: #f7e24a;
+    color: #fff;
+    border: 2px solid #f7e24a;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.scores:hover {
+    background-color: #F7DF1E;
+    border: 2px solid #F7DF1E;
+    color: #000;
+}
+.scores-header {
+    display: flex;
+    justify-content: flex-end;
+}
+.memory_box h3 {
+    text-align: center;
+    font-size: 21px;
+}
+.memory_box .input-field {
+    margin-bottom: 10px;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin: 10px auto;
+}
+.memory_box .player-name {
+    width: 400px;
+    height: 35px;
+    padding: 10px;
+    border: 2px solid #000;
+}
+.memory_box .save-result {
+    cursor: pointer;
+    margin-left: 15px;
+    width: 130px;
+    height: 35px;
+    background-color: #f7e24a;
+    border: 2px solid #f7e24a;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+}
+.memory_box .save-result:hover {
+    background-color: #F7DF1E;
+    color: #000;
+}
+.memory_box .memory-exit {
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0 auto;
+}
+.memory_box .memory-exit:hover {
+    background-color: #F7DF1E;
+    color: #000;
+    border: none;
+}
+.player_box {
+    opacity: 0;
+    background-color: #fff;
+    padding: 20px 30px 30px 20px;
+    border-radius: 15px;
+}
+.player_box ul {
+    list-style: none;
+}
+/* Media queries */
+@media (max-width: 780px) {
+    .js-logo {
+        font-size: 130px;
+
+    }
+    .start-title {
+        font-size: 100px;
+    }
+    .start-btn{
+        padding: 7px 15px;
+    }
+}
+@media(max-width: 460px) {
+    .start {
+        width: 90%;
+    }
+    .js-logo {
+        font-size: 90px;
+    }
+    .start-title {
+        font-size: 60px;
+    }
+    .start-description {
+        font-size: 18px;
+        margin: 10px 0 0 0;
+    }
+    /* Save memory screen */
+    .memory_box {
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        width: 90%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 30px 30px 30px;
+        /* align-items: center; */
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .memory_box h3 {
+        font-size: 16px;
+    }
+    .memory_box .input-field {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .scores {
+        width: 60px;
+        height: 50px;
+        background: #f7e24a;
+        color: #fff;
+        border: 2px solid #f7e24a;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .memory_box .input-field{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .memory_box .player-name{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .memory_box .save-result {
+        width: 100px;
+
+    }
 }
